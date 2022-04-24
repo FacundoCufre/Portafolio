@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+html {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+}
+
+.principal {
+  height: 100vh;
+  width: 75%;
+  background-color: #161618;
+}
+
+.informacion {
+  position: relative;
+  height: 100vh;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #212126;
+  box-shadow: 0px 0px 5px 1px black;
+}
+.informacion .informacion--div {
+  padding: 30px;
+  height: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  background-color: #212126;
+}
+.informacion .informacion--div .foto {
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  border: 3px solid #179CBC;
+  box-shadow: 0px 0px 5px 1px black;
+  background-image: url(../img/1467646262_522853_1467646344_noticia_normal.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.informacion .informacion--div .nombre {
+  margin-top: 20px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+  color: #179CBC;
+  text-shadow: 2px 2px 2px black;
+}
+.informacion .informacion--div .webdev {
+  margin-top: 10px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 20px;
+  color: #eecb69;
+}
+.informacion .habs {
+  position: absolute;
+  top: 280px;
+  width: 100%;
+  height: 230px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  transform: translateY(-120%);
+  font-family: "Bebas Neue", cursive;
+  color: #f0f0f0;
+  background-color: #212126;
+}
+.informacion .habs h2 {
+  height: 10%;
+}
+.informacion .habs .habilidades {
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-bottom: 1px black solid;
+}
+.informacion .habs .habilidades .habilidad {
+  height: 25px;
+  font-size: 20px;
+  text-align: 12.5px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 5px;
+  color: #161618;
+}
+.informacion .habs .habilidades .habilidad span {
+  margin: 5px;
+}
+.informacion .datos {
+  position: absolute;
+  top: 280px;
+  width: 100%;
+  height: 230px;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  transform: translateY(-120%);
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+  color: #f0f0f0;
+  background-color: #212126;
+}
+.informacion .datos div {
+  margin-top: 10px;
+}
+.informacion .datos div span {
+  margin-left: 5px;
+}
+.informacion .cursos {
+  position: absolute;
+  top: 280px;
+  width: 100%;
+  height: 230px;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  transform: translateY(-120%);
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+  color: #f0f0f0;
+  background-color: #212126;
+}
+.informacion .cursos div {
+  margin-top: 10px;
+  transition: color 0.5s;
+}
+.informacion .cursos div span {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.informacion .cursos div:hover {
+  color: #eecb69;
+  cursor: pointer;
+}
+.informacion .show {
+  transform: translateY(0%);
+}
+.informacion .botones {
+  z-index: 1;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 5px 1px black;
+}
+.informacion .botones .boton {
+  height: 100%;
+  width: 33.3%;
+  background-color: #36363a;
+  border-right: 1px solid #212126;
+  transition: background-color 0.5s, color 0.5s;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+.informacion .botones .boton i {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.informacion .botones .boton:hover {
+  background-color: #161618;
+  color: #eecb69;
+  cursor: pointer;
+}
+.informacion .botones .boton span {
+  cursor: pointer;
+}
+
+.show {
+  transform: translateY(0%);
+}
+
+/*# sourceMappingURL=inicio.css.map */

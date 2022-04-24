@@ -1,0 +1,2 @@
+mostrarHabilidades()
+mostrarInformacion()

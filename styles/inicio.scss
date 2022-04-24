@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+$fuente1: 'Bebas Neue', cursive;
+$fuente2: 'Yanone Kaffeesatz', sans-serif;
+
+$blanco: #f0f0f0;
+$negro: #161618;
+$gris: #212126;
+$grisClaro: #36363a;
+$turquesa: #179CBC;
+$verde: #58d2ba;
+$amarillo: #eecb69;
+
+html{
+    height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+body{
+    background-color: $blanco;
+    display: flex;
+    flex-direction: row;
+}
+
+.principal{
+    height: 100vh;
+    width: 75%;
+    background-color: $negro;
+}
+.informacion{
+    position: relative;
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $gris;
+    box-shadow: 0px 0px 5px 1px black;
+    .informacion--div{
+        padding: 30px;
+        height: 320px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        background-color: $gris;
+        .foto{
+            height: 160px;
+            width: 160px;
+            border-radius: 80px;
+            border: 3px solid $turquesa;
+            box-shadow: 0px 0px 5px 1px black;
+            background-image: url(../img/1467646262_522853_1467646344_noticia_normal.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .nombre{
+            margin-top: 20px;
+            font-family: $fuente1;
+            font-size: 40px;
+            color: $turquesa;
+            text-shadow: 2px 2px 2px black;
+        }
+        .webdev{
+            margin-top: 10px;
+            font-family: $fuente2;
+            font-size: 20px;
+            color: $amarillo;
+        }
+    }
+    .habs{
+        position: absolute;
+        top: 280px;
+        width: 100%;
+        height: 230px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        transform: translateY(-120%);
+        font-family: $fuente1;
+        color: $blanco;
+        background-color: $gris;
+        h2{
+            height: 10%;
+        }
+        .habilidades{
+            height: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            border-bottom: 1px black solid;
+            .habilidad{
+                height: 25px;
+                font-size: 20px;
+                text-align: 12.5px;
+                padding-left: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                margin-right: 5px;
+                color: $negro;
+                span{
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    
+    .datos{
+        position: absolute;
+        top: 280px;
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        transform: translateY(-120%);
+        font-size: 20px;
+        font-family: $fuente1;
+        color: $blanco;
+        background-color: $gris;
+        div{
+            margin-top: 10px;
+            span{
+                margin-left: 5px;
+            }
+        }
+    }
+    .cursos{
+        position: absolute;
+        top: 280px;
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        transform: translateY(-120%);
+        font-size: 20px;
+        font-family: $fuente1;
+        color: $blanco;
+        background-color: $gris;
+        div{
+            margin-top: 10px;
+            transition: color .5s;
+            span{
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            &:hover{
+                color: $amarillo;
+                cursor: pointer;
+            }
+        }
+    }
+    .show{
+        transform: translateY(0%)
+    }
+    .botones{
+        z-index: 1;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 0px 5px 1px black;
+        .boton{
+            height: 100%;
+            width: 33.3%;
+            background-color: $grisClaro;
+            border-right: 1px solid $gris;
+            transition: background-color .5s, color .5s;
+            color: $blanco;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: $fuente2;
+            i{
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
+            &:hover{
+                background-color: $negro;
+                color: $amarillo;
+                cursor: pointer;
+            }
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.show{
+    transform: translateY(0%)
+}
