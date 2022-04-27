@@ -1,2 +1,4 @@
 mostrarHabilidades()
 mostrarInformacion()
+mostrarTrabajos()
+mostrarDetallesTrabajo()

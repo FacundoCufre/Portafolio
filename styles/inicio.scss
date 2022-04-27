@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+
 $fuente1: 'Bebas Neue', cursive;
 $fuente2: 'Yanone Kaffeesatz', sans-serif;
 
@@ -33,6 +36,80 @@ body{
     height: 100vh;
     width: 75%;
     background-color: $negro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    nav{
+        margin-top: 35px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            width: 120px;
+            height: 45px;
+            border-bottom: 1px $grisClaro solid;
+            border-top: 1px $grisClaro solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            transition: all .3s;
+            color: $amarillo;
+            font-family: $fuente1;
+            &:hover{
+                height: 60px;
+                border-bottom: 1px $turquesa solid;
+                border-top: 1px $turquesa solid;
+                background-color: $grisClaro;
+                color: $blanco;
+            }
+        }
+    }
+    .trabajos{
+        width: 90%;
+        height: 400px;
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-auto-rows: 50%;
+        .trabajo{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            .portada{
+                font-size: 35px;
+                height: 60%;
+                width: 90%;
+                background-color: #58d2ba;
+                position: absolute;
+                border-radius: 10px;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 0px 5px 1px black;
+                text-align: center;
+            }
+            .detalles{
+                height: 40%;
+                width: 90%;
+                top: 50%;
+                border-radius: 10px;
+                position: absolute;
+                transform: translateY(-100%);
+                transition: all .5s;
+            }
+            .show{
+                transform: translateY(0%)
+            }
+        }
+    }
 }
 .informacion{
     position: relative;

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
 html {
   height: 100vh;
 }
@@ -21,6 +23,80 @@ body {
   height: 100vh;
   width: 75%;
   background-color: #161618;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal nav {
+  margin-top: 35px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.principal nav div {
+  width: 120px;
+  height: 45px;
+  border-bottom: 1px #36363a solid;
+  border-top: 1px #36363a solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: all 0.3s;
+  color: #eecb69;
+  font-family: "Bebas Neue", cursive;
+}
+.principal nav div:hover {
+  height: 60px;
+  border-bottom: 1px #179CBC solid;
+  border-top: 1px #179CBC solid;
+  background-color: #36363a;
+  color: #f0f0f0;
+}
+.principal .trabajos {
+  width: 90%;
+  height: 400px;
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-auto-rows: 50%;
+}
+.principal .trabajos .trabajo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.principal .trabajos .trabajo .portada {
+  font-size: 35px;
+  height: 60%;
+  width: 90%;
+  background-color: #58d2ba;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px black;
+  text-align: center;
+}
+.principal .trabajos .trabajo .detalles {
+  height: 40%;
+  width: 90%;
+  top: 50%;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+.principal .trabajos .trabajo .show {
+  transform: translateY(0%);
 }
 
 .informacion {

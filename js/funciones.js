@@ -5,7 +5,7 @@ function mostrarHabilidades(){
             hab.setAttribute("class", `habilidad`)
             hab.setAttribute("style", `background-color: ${habilidad.color};`)
             
-            hab.innerHTML=` ${habilidad.habilidad}
+            hab.innerHTML=` <span>${habilidad.nombre}</span>
                             <span>${habilidad.logo}</span>`
         
         conteiner.appendChild(hab);})
@@ -37,4 +37,36 @@ function mostrarInformacion(){
         habs.classList.remove("show")
         datos.classList.remove("show")
     })
+}
+
+
+
+function mostrarTrabajos(){
+    trabajos.forEach((trabajo)=>{
+        const conteiner = document.getElementById("trabajos")
+        const trbj = document.createElement("div");
+            trbj.setAttribute("class", `trabajo`)
+            trbj.setAttribute("id", `trabajo--${trabajo.nombre}`)
+            trbj.innerHTML=`<div class="portada" style="color: ${trabajo.color}; background-color: ${trabajo.colorfondo}; font-family: ${trabajo.fuente};">
+                                <span>${trabajo.nombre}</span>
+                            </div>
+                            <div class="detalles" id="detalles--${trabajo.nombre}" style="color: ${trabajo.colorfondo}; background-color: ${trabajo.color}; font-family: ${trabajo.fuente};">
+
+                            </div>`
+        
+        conteiner.append(trbj);
+    
+        const trabaj = document.getElementById(`trabajo--${trabajo.nombre}`)
+        const detal= document.getElementById(`detalles--${trabajo.nombre}`)
+
+        trabaj.addEventListener("mouseover", ()=>{
+            detal.classList.add("show")
+        })
+
+        trabaj.addEventListener("mouseout", ()=>{
+            detal.classList.remove("show")
+        })
+    })
+
+        
 }
